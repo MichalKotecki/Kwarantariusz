@@ -56,9 +56,9 @@ class TableOrderFragment : Fragment() {
         val tempProductList1: ArrayList<String> = arrayListOf("8 relek papieru toaletowego", "2 mleka", "masło")
         orderArray.add(OrderItemData(3,4, "Stanisław Fizykowski", "123123123", 5, "Andrzej Pomocny", tempProductList1, "Jestem starszą osobą", 100, "waiting", "Polna 2"))
         val tempProductList2: ArrayList<String> = arrayListOf("3 wody", "2 chleby")
-        orderArray.add(OrderItemData(4,5, "Zofia Mak", "444555666", 6, "Olaf Dobry", tempProductList1, "Jestem starszą osobą", 200, "waiting", "Cicha 3"))
-        val tempProductList3: ArrayList<String> = arrayListOf("makaron", "leki", "cukier")
-        orderArray.add(OrderItemData(5,6, "Stanisław Fizykows", "888999888", 7, "Mateusz Superowski", tempProductList1, "Jestem starszą osobą", 50, "waiting", "Rewolucji 158"))
+        orderArray.add(OrderItemData(4,5, "Zofia Mak", "444555666", 6, "Olaf Dobry", tempProductList2, "Zaplace 10 zloty", 200, "waiting", "Cicha 3"))
+        val tempProductList3: ArrayList<String> = arrayListOf("makaron", "leki", "cukier", "ldbfkk l;kfdgl;hkdf llkdfl;hf lklfdh ldfgl;kdf dlfhl;fl ldkflhfk ldkhl;k")
+        orderArray.add(OrderItemData(5,6, "Stanisław Fizykows", "888999888", 7, "Mateusz Superowski", tempProductList3, "Jestem starszą osobą", 50, "waiting", "Rewolucji 158"))
 
         orderRecyclerViewAdapter = OrderRecyclerViewAdapter(orderArray, context)
         tableorder_recyclerview.adapter = orderRecyclerViewAdapter
