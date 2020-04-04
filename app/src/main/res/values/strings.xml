@@ -1,0 +1,92 @@
+<resources>
+    <string name="app_name">L-Earn</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="settings">Settings</string>
+    <string name="register">REGISTER</string>
+    <string name="register_go">New user? Register here.</string>
+    <string name="login">LOG IN</string>
+    <string name="login_go">Already have an account? Sign in here.</string>
+    <string name="logout">Log Out</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="repeatpassword">Repeat password</string>
+    <string name="save">save</string>
+    <string name="name">Name</string>
+    <string name="city">City</string>
+    <string name="pleaseenteremail">Please enter email</string>
+    <string name="incorrectemail">Incorrect email format</string>
+    <string name="pleaseenterpassword">Please enter password</string>
+    <string name="fieldsareempty">Fields are empty!</string>
+    <string name="registersuccessful">Register successful</string>
+    <string name="title_activity_tabs">TabsActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="title_activity_instructions">Instructions</string>
+
+    <string name="map">Map</string>
+
+    <string name="subject">Subject</string>
+    <string name="description">Description</string>
+    <string name="level">Level</string>
+    <string name="location">Location</string>
+
+    <string name="hellothere">HELLO THERE!</string>
+    <string name="sayhito">SAY HI TO</string>
+    <string name="appforlearningandearning">APP FOR LEARNING AND EARNING</string>
+    <string name="topappquote">\"ONE OF THE TOP APPS OF 2020\" - ADAM MACIAK</string>
+    <string name="michalkotecki">Michał Kotecki</string>
+    <string name="adammaciak">Adam Maciak</string>
+
+    <string name="ifyouareastudent">IF YOU ARE A STUDENT, L-EARN HELPS YOU FIND A COMPETENT TEACHER IN YOUR AREA
+    </string>
+    <string name="filterby">\u2022 FILTER BY DISTANCE, EDUCATION LEVEL AND RATING</string>
+    <string name="contactteacher">\u2022 CONTACT TEACHER</string>
+    <string name="makepayments">\u2022 MAKE PAYMENTS</string>
+    <string name="givefeedback">\u2022 GIVE FEEDBACK</string>
+
+    <string name="distance">Distance</string>
+    <string name="price">Price</string>
+    <string name="distance_km">Distance (KM)</string>
+    <string name="price_pln">Price (PLN)</string>
+    <string name="TEMP">TEMP_string</string>
+
+    <string name="ifyouareatutor">\tIF YOU ARE A TUTOR, L-EARN HELPS YOU EXCHANGE YOUR KNOWLEDGE FOR MONEY</string>
+    <string name="advertiseyourself">\u2022 ADVERTISE YOURSELF</string>
+    <string name="findclients">\u2022 FIND CLIENTS</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="pleaseenterprice">Please enter price</string>
+    <string name="pleaseenterlocation">Please enter location</string>
+    <string name="pricemustbeapositivenumber">Price must be a positive number</string>
+    <string name="youhavesuccesfullyloggedin">You have succesfully logged in</string>
+    <string name="notification_title_incoming_meeting">You have an incoming lesson today</string>
+    <string name="notification_text_check_details">Tap here to check the details of the meeting.</string>
+
+
+    <string name="api_key_nasa">6LUA2sCf8qEFOCFQWlLpTzH6LeFMUBU3KsNYKQNI</string>
+    <string name="seeComments">SEE COMMENTS</string>
+    <string name="choosedate">Choose date:</string>
+    <string name="accept">ACCEPT</string>
+    <string name="comments">Comments</string>
+    <string name="lessonstatus">Lesson status</string>
+    <string name="x_char">X</string>
+    <string name="advertisments">Advertisments</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="choosetime">Choose time:</string>
+    <string name="seemylessons">My lessons</string>
+    <string name="sendnotification">SEND NOTIFICATION</string>
+    <string name="addcomment">ADD COMMENT</string>
+    <string name="go_back">GO BACK</string>
+    <string name="TEMP_Date">1/10/2020</string>
+    <string name="TEMP_Price">30</string>
+    <string name="TEMP_Subject">Biology</string>
+    <string name="TEMP_Level">University</string>
+    <string name="checkout">Checkout</string>
+    <string name="paynow">PAY NOW</string>
+    <string name="paymentdetails">Payment details</string>
+    <string name="joincommenity">JOIN COMMUNITY</string>
+    <string name="join_community_motivating_text">Visit our website to join L-Earn\'s community as a teacher:</string>
+    <string name="website_address">www.l_earn.com/career</string>
+</resources>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/kwarantariusz_instruction_background">
+
+
+    <TextView
+            android:text="@string/sayhito"
+            android:layout_width="77dp"
+            android:layout_height="18dp"
+            android:id="@+id/sayhito_welcome_t" android:textSize="14sp"
+            android:textColor="@color/BasicWhite"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/hellothee_welcome_t"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
+    <TextView
+            android:text="@string/appforlearningandearning"
+            android:layout_width="372dp"
+            android:layout_height="51dp"
+            android:id="@+id/appfor_welcome_t" android:textSize="14sp"
+            android:textColor="@color/BasicWhite"
+            app:layout_constraintTop_toBottomOf="@+id/l_earn_welcome_t" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+    <TextView
+            android:text="@string/app_name"
+            android:layout_width="222dp"
+            android:layout_height="82dp"
+            android:id="@+id/l_earn_welcome_t" android:textSize="70sp"
+            android:textColor="@color/BasicWhite" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/sayhito_welcome_t"/>
+    <TextView
+            android:text="@string/hellothere"
+            android:layout_width="219dp"
+            android:layout_height="49dp"
+            android:id="@+id/hellothee_welcome_t" android:textSize="30sp"
+            android:textColor="@color/BasicWhite" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="290dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/brain_image"
+            android:id="@+id/imageView" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

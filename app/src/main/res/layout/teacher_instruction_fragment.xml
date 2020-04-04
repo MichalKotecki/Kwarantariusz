@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/kwarantariusz_instruction_background">
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" app:srcCompat="@drawable/image_instructions_earth"
+            android:id="@+id/image_earth" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+            android:text="@string/advertiseyourself"
+            android:layout_width="343dp"
+            android:layout_height="25dp"
+            android:id="@+id/advertise_teacher_t" android:textSize="14sp"
+            android:textColor="@color/BasicWhite"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/ifyouareateacher_teacher"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
+    <TextView
+            android:text="@string/givefeedback"
+            android:layout_width="341dp"
+            android:layout_height="29dp"
+            android:id="@+id/givefeedback_teacher_t" android:textSize="14sp"
+            android:textColor="@color/BasicWhite"
+            app:layout_constraintTop_toBottomOf="@+id/findclients_findclients_t"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
+    <TextView
+            android:text="@string/findclients"
+            android:layout_width="341dp"
+            android:layout_height="27dp"
+            android:id="@+id/findclients_findclients_t" android:textSize="14sp"
+            android:textColor="@color/BasicWhite"
+            app:layout_constraintTop_toBottomOf="@+id/advertise_teacher_t" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"/>
+    <TextView
+            android:text="@string/ifyouareatutor"
+            android:layout_width="364dp"
+            android:layout_height="38dp"
+            android:id="@+id/ifyouareateacher_teacher" android:textSize="14sp"
+            android:textColor="@color/BasicWhite"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="270dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+    />
+    <Button
+            android:id="@+id/teacher_instructions_visit_website_button"
+            android:layout_width="186dp"
+            android:layout_height="55dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/button_rounded_corners"
+            android:text="@string/joincommenity" android:textColor="@color/BasicWhite"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/givefeedback_teacher_t"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

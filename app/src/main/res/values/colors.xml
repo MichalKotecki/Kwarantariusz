@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4abdac</color>
+    <color name="colorPrimaryDark">#21ad99</color>
+    <color name="colorAccent">#fe491a</color>
+    <color name="colorAccentLight">#fc967c</color>
+    <color name="DefaultTextGray">#808080</color>
+
+
+    <color name="BasicWhite">#ffffff</color>
+    <color name="LightGrey">#dfdce3</color>
+    <color name="Azure">#4abdac</color>
+    <color name="Pomagrande">#fe491a</color>
+    <color name="Yellow">#f7b733</color>
+    <color name="DarkBlue">#1e1e54</color>
+
+
+    <color name="Transparent">#00000000</color>
+
+</resources>
