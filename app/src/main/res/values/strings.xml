@@ -1,19 +1,20 @@
 <resources>
     <string name="app_name">Kwarantariusz</string>
-    <string name="michalkotecki">MICHAL KOTECKI</string>
+    <string name="michalkotecki">MICHA&#321; KOTECKI</string>
     <string name="hubertfraszczyk">HUBERT FRASZCZYK</string>
-    <string name="profile">Profile</string>
-    <string name="search">Search</string>
-    <string name="settings">Settings</string>
-    <string name="register">REGISTER</string>
-    <string name="register_go">New user? Register here.</string>
-    <string name="login">LOG IN</string>
-    <string name="login_go">Already have an account? Sign in here.</string>
+    <string name="profile">Profil</string>
+    <string name="phone">Numer telefonu</string>
+    <string name="search">Szukaj</string>
+    <string name="settings">Ustawienia</string>
+    <string name="register">ZAREJESTRUJ</string>
+    <string name="register_go">Nowy u&#380;ytkownik? Zarejestruj si&#281;.</string>
+    <string name="login">ZALOGUJ</string>
+    <string name="login_go">Masz ju&#380; konto? Zaloguj si&#281;.</string>
     <string name="logout">Log Out</string>
     <string name="email">Email</string>
-    <string name="password">Password</string>
-    <string name="repeatpassword">Repeat password</string>
-    <string name="save">save</string>
+    <string name="password">Has&#322;o</string>
+    <string name="repeatpassword">Powt&#243;rz has&#322;o</string>
+    <string name="save">zapisz</string>
     <string name="name">Name</string>
     <string name="city">City</string>
     <string name="pleaseenteremail">Please enter email</string>
@@ -34,26 +35,26 @@
     <string name="location">Location</string>
 
 
-    <string name="welcome_page_do_you_need_help">POTRZEBUJESZ POMOCY ABY KTOS ZROBIL ZA CIEBIE ZAKUPY W TRAKCIE KWARANTANNY?</string>
-    <string name="welcome_page_let_our_heroic">POMOGA CI NASI BOHATERSCY</string>
+    <string name="welcome_page_do_you_need_help">POTRZEBUJESZ ABY KTO&#346; ZROBI&#321; ZA CIEBIE ZAKUPY W TRAKCIE KWARANTANNY?</string>
+    <string name="welcome_page_let_our_heroic">POMOG&#260; CI NASI BOHATERSCY</string>
     <string name="welcome_page_quaranteers">KWARATARIUSZE!</string>
 
-    <string name="needy_instruction_add">DODAJ LISTE ZAKUPOW, PRZYBLIZONA KWOTE ZA ZAKUPY, MIASTO, ADRES I TELEFON.</string>
-    <string name="needy_instruction_your_local">TWOJ LOKALNY KWARANTARIUSZ SKONTAKTUJE SIE Z TOBA, ABY DOPYTAC O SZCZEGOLY, ZROBI ZA CIEBIE ZAKUPY I DOSTARCZY JE DO DOMU.</string>
+    <string name="needy_instruction_add">DODAJ LIST&#280; ZAKUP&#211;W, PRZYBLI&#379;ON&#260; KWOT&#280; ZA ZAKUPY, MIASTO, ADRES I TELEFON.</string>
+    <string name="needy_instruction_your_local">TW&#211;J LOKALNY KWARANTARIUSZ SKONTAKTUJE SI&#280; Z TOB&#260;, ABY DOPYTA&#262; O SZCZEG&#211;&#321;Y, ZROBI ZA CIEBIE ZAKUPY I DOSTARCZY JE DO TWOJEGO DOMU.</string>
 
-    <string name="quaranteer_instruction_do_you_want_to_help">CHCESZ POMOC OSOBOM Z GRUPY RYZYKA?</string>
-    <string name="quaranteer_instruction_become">ZOSTAN</string>
+    <string name="quaranteer_instruction_do_you_want_to_help">CHCESZ POM&#211;C OSOBOM Z GRUPY RYZYKA?</string>
+    <string name="quaranteer_instruction_become">ZOSTA&#323;</string>
     <string name="quaranteer_instruction_quaranteer_exclamation_mark">KWARANTARIUSZEM!</string>
-    <string name="quaranteer_instruction_make_account">ZALOZ KONTO I ZNAJDZ LISTY ZAKUPOW W TWOJEJ OKOLICY</string>
+    <string name="quaranteer_instruction_make_account">ZA&#321;O;&#379; KONTO I ZNAJD&#377; LISTY ZAKUP&#211;W W TWOJEJ OKOLICY</string>
 
 
-    <string name="join">DOLACZ</string>
-    <string name="add_shopping_list">DODAJ LISTE ZAKUPOW</string>
+    <string name="join">DO&#321;&#260;CZ</string>
+    <string name="add_shopping_list">DODAJ LIST&#280; ZAKUP&#211;W</string>
 
 
     <string name="help">POMAGAM</string>
-    <string name="shopping_lists">LISTY ZAKUPOW</string>
-    <string name="currency">ZLOTY</string>
+    <string name="shopping_lists">LISTY ZAKUP&#211;W</string>
+    <string name="currency">Z&#321;OTY</string>
     <string name="countrycallingcode">+48</string>
 
 
@@ -68,34 +69,9 @@
     <string name="pleaseenterlocation">Please enter location</string>
     <string name="pricemustbeapositivenumber">Price must be a positive number</string>
     <string name="youhavesuccesfullyloggedin">You have succesfully logged in</string>
-    <string name="notification_title_incoming_meeting">You have an incoming lesson today</string>
-    <string name="notification_text_check_details">Tap here to check the details of the meeting.</string>
 
-
-    <string name="api_key_nasa">6LUA2sCf8qEFOCFQWlLpTzH6LeFMUBU3KsNYKQNI</string>
-    <string name="seeComments">SEE COMMENTS</string>
-    <string name="choosedate">Choose date:</string>
-    <string name="accept">ACCEPT</string>
-    <string name="comments">Comments</string>
-    <string name="lessonstatus">Lesson status</string>
-    <string name="x_char">X</string>
-    <string name="advertisments">Advertisments</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="choosetime">Choose time:</string>
-    <string name="seemylessons">My lessons</string>
-    <string name="sendnotification">SEND NOTIFICATION</string>
-    <string name="addcomment">ADD COMMENT</string>
-    <string name="go_back">GO BACK</string>
-    <string name="TEMP_Date">1/10/2020</string>
-    <string name="TEMP_Price">30</string>
-    <string name="TEMP_Subject">Biology</string>
-    <string name="TEMP_Level">University</string>
-    <string name="checkout">Checkout</string>
-    <string name="paynow">PAY NOW</string>
-    <string name="paymentdetails">Payment details</string>
-    <string name="joincommenity">JOIN COMMUNITY</string>
-    <string name="join_community_motivating_text">Visit our website to join L-Earn\'s community as a teacher:</string>
-    <string name="website_address">www.l_earn.com/career</string>
+
 </resources>

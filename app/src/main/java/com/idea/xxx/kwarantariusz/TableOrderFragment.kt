@@ -68,11 +68,11 @@ class TableOrderFragment : Fragment() {
             .enqueue(object : Callback<OrdersListFromCityWithGivenIDDTO> {
 
                 override fun onFailure(call: Call<OrdersListFromCityWithGivenIDDTO>, t: Throwable) {
-                    Toast.makeText(
-                        context,
-                        "Error in Order Table Fragment",
-                        Toast.LENGTH_SHORT
-                    ).show()
+//                    Toast.makeText(
+//                        context,
+//                        "Error in Order Table Fragment",
+//                        Toast.LENGTH_SHORT
+//                    ).show()
                 }
 
                 override fun onResponse(
@@ -88,10 +88,10 @@ class TableOrderFragment : Fragment() {
                                 order.id_order,
                                 order.id_needy,
                                 order.needy_name,
-                                order.needy_phone,
+                                order.phone,
                                 order.id_quaranteer,
                                 order.quaranteer_name,
-                                order.productList,
+                                order.products,
                                 order.description,
                                 order.max_spend,
                                 order.status,
