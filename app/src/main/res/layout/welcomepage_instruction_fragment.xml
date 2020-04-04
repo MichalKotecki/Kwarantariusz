@@ -8,6 +8,12 @@
         android:background="@drawable/kwarantariusz_instruction_background">
 
 
+    <ImageView
+            android:layout_width="239dp"
+            android:layout_height="179dp" app:srcCompat="@drawable/circle_shopping_cart"
+            android:id="@+id/image_atom3" android:layout_marginTop="32dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
     <TextView
             android:text="@string/welcome_page_let_our_heroic"
             android:layout_width="299dp"
@@ -20,22 +26,16 @@
             android:text="@string/welcome_page_quaranteers"
             android:layout_width="373dp"
             android:layout_height="68dp"
-            android:id="@+id/l_earn_welcome_t" android:textSize="45sp"
+            android:id="@+id/l_earn_welcome_t" android:textSize="40sp"
             android:textColor="@color/BasicWhite" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"
             android:layout_marginTop="8dp" app:layout_constraintTop_toBottomOf="@+id/sayhito_welcome_t"/>
     <TextView
             android:text="@string/welcome_page_do_you_need_help"
-            android:layout_width="345dp"
-            android:layout_height="128dp"
-            android:id="@+id/hellothee_welcome_t" android:textSize="24sp"
+            android:layout_width="333dp"
+            android:layout_height="80dp"
+            android:id="@+id/hellothee_welcome_t" android:textSize="18sp"
             android:textColor="@color/BasicWhite" app:layout_constraintTop_toTopOf="parent"
             android:layout_marginTop="290dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"/>
-    <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" app:srcCompat="@drawable/image_instructions_atom"
-            android:id="@+id/imageView" android:layout_marginTop="32dp"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

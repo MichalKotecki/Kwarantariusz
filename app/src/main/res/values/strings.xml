@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Kwarantariusz</string>
+    <string name="michalkotecki">MICHAL KOTECKI</string>
+    <string name="hubertfraszczyk">HUBERT FRASZCZYK</string>
     <string name="profile">Profile</string>
     <string name="search">Search</string>
     <string name="settings">Settings</string>
@@ -36,7 +38,7 @@
     <string name="welcome_page_let_our_heroic">POMOGA CI NASI BOHATERSCY</string>
     <string name="welcome_page_quaranteers">KWARATARIUSZE!</string>
 
-    <string name="needy_instruction_add">DODAJ LISTE ZAKUPOW, PRZYBLIZONA KWOTE ZA ZAKUPY, MIASTO, ADRES I TELEFON</string>
+    <string name="needy_instruction_add">DODAJ LISTE ZAKUPOW, PRZYBLIZONA KWOTE ZA ZAKUPY, MIASTO, ADRES I TELEFON.</string>
     <string name="needy_instruction_your_local">TWOJ LOKALNY KWARANTARIUSZ SKONTAKTUJE SIE Z TOBA, ABY DOPYTAC O SZCZEGOLY, ZROBI ZA CIEBIE ZAKUPY I DOSTARCZY JE DO DOMU.</string>
 
     <string name="quaranteer_instruction_do_you_want_to_help">CHCESZ POMOC OSOBOM Z GRUPY RYZYKA?</string>
@@ -44,19 +46,13 @@
     <string name="quaranteer_instruction_quaranteer_exclamation_mark">KWARANTARIUSZEM!</string>
     <string name="quaranteer_instruction_make_account">ZALOZ KONTO I ZNAJDZ LISTY ZAKUPOW W TWOJEJ OKOLICY</string>
 
-    <string name="hellothere">HELLO THERE!</string>
-    <string name="sayhito">SAY HI TO</string>
-    <string name="appforlearningandearning">APP FOR LEARNING AND EARNING</string>
-    <string name="topappquote">\"ONE OF THE TOP APPS OF 2020\" - ADAM MACIAK</string>
-    <string name="michalkotecki">Michał Kotecki</string>
-    <string name="adammaciak">Adam Maciak</string>
 
-    <string name="ifyouareastudent">IF YOU ARE A STUDENT, L-EARN HELPS YOU FIND A COMPETENT TEACHER IN YOUR AREA
-    </string>
-    <string name="filterby">\u2022 FILTER BY DISTANCE, EDUCATION LEVEL AND RATING</string>
-    <string name="contactteacher">\u2022 CONTACT TEACHER</string>
-    <string name="makepayments">\u2022 MAKE PAYMENTS</string>
-    <string name="givefeedback">\u2022 GIVE FEEDBACK</string>
+    <string name="join">DOLACZ</string>
+    <string name="add_shopping_list">DODAJ LISTE ZAKUPOW</string>
+
+
+
+
 
     <string name="distance">Distance</string>
     <string name="price">Price</string>
@@ -64,9 +60,6 @@
     <string name="price_pln">Price (PLN)</string>
     <string name="TEMP">TEMP_string</string>
 
-    <string name="ifyouareatutor">\tIF YOU ARE A TUTOR, L-EARN HELPS YOU EXCHANGE YOUR KNOWLEDGE FOR MONEY</string>
-    <string name="advertiseyourself">\u2022 ADVERTISE YOURSELF</string>
-    <string name="findclients">\u2022 FIND CLIENTS</string>
     <string name="title_activity_maps">Map</string>
     <string name="pleaseenterprice">Please enter price</string>
     <string name="pleaseenterlocation">Please enter location</string>
