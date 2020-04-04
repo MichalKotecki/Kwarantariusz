@@ -60,47 +60,48 @@ class RegisterFragment : NavHostFragment() {
                 password_register.error = "Uncorrect repeated password"
                 password_register.requestFocus();
             } else {
-                MainActivity.client.registerAccount(
-                    RegisterDto(
-                        email = email_register.text.toString(),
-                        username = nickname.text.toString(),
-                        password = password_register.text.toString(),
-                        typeUser = "student"
-                    )
-                ).enqueue(object : Callback<MessageDto> {
-                    override fun onResponse(
-                        call: Call<MessageDto>,
-                        response: retrofit2.Response<MessageDto>
-                    ) {
-                        if (response.code()==200) {
-                            Toast.makeText(
-                                context,
-                                response.body()!!.message,
-                                Toast.LENGTH_SHORT
-                            ).show()
-                            fragmentManager.beginTransaction()
-                                .setCustomAnimations(R.anim.in_left_down_corner, R.anim.out_right_up_corner)
-                                .replace(R.id.containerForFragment, loginFragment)
-                                .commit()
-                        }else if(response.code()==404) {
-                            Toast.makeText(
-                                context,
-                                "email incorrect",
-                                Toast.LENGTH_SHORT
-                            ).show()
-                        }
-                        else{
-                               // Toast.makeText( context, response.body()!!.message, Toast.LENGTH_SHORT ).show()
-                            }
-                        }
-                    override fun onFailure(call: Call<MessageDto>, t: Throwable) {
-                        Toast.makeText(
-                            context,
-                            "error",
-                            Toast.LENGTH_SHORT
-                        ).show()
-                    }
-                })
+//                MainActivity.client.registerAccount(
+//                    RegisterDto(
+//                        email = email_register.text.toString(),
+//                        username = nickname.text.toString(),
+//                        password = password_register.text.toString(),
+//                        typeUser = "student"
+//                    )
+//                ).enqueue(object : Callback<MessageDto> {
+//                    override fun onResponse(
+//                        call: Call<MessageDto>,
+//                        response: retrofit2.Response<MessageDto>
+//                    ) {
+//                        if (response.code()==200) {
+//                            Toast.makeText(
+//                                context,
+//                                response.body()!!.message,
+//                                Toast.LENGTH_SHORT
+//                            ).show()
+//                            fragmentManager.beginTransaction()
+//                                .setCustomAnimations(R.anim.in_left_down_corner, R.anim.out_right_up_corner)
+//                                .replace(R.id.containerForFragment, loginFragment)
+//                                .commit()
+//                        }else if(response.code()==404) {
+//                            Toast.makeText(
+//                                context,
+//                                "email incorrect",
+//                                Toast.LENGTH_SHORT
+//                            ).show()
+//                        }
+//                        else{
+//                               // Toast.makeText( context, response.body()!!.message, Toast.LENGTH_SHORT ).show()
+//                            }
+//                        }
+//                    override fun onFailure(call: Call<MessageDto>, t: Throwable) {
+//                        Toast.makeText(
+//                            context,
+//                            "error",
+//                            Toast.LENGTH_SHORT
+//                        ).show()
+//                    }
+//                }
+//            )
 
 
             }

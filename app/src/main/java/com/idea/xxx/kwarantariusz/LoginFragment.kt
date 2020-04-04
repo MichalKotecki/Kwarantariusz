@@ -105,23 +105,23 @@ class LoginFragment : Fragment() {
 //                                    .show();
 //                            }
 
-                        }
+//                        }
 
 //                        override fun onFailure(call: Call<UserDTO>, t: Throwable) {
 //
 //                        }
-                    }
+//                    }
 //        )
 
 
-            }
+//            }
 
 //            textGoRegister.setOnClickListener { view ->
 //                fragmentManager.beginTransaction()
 //                    .setCustomAnimations(R.anim.in_left_down_corner, R.anim.out_right_up_corner)
 //                    .replace(R.id.containerForFragment, registerFragment).commit()
 //
-//            }
+            }
         }
     }
 }

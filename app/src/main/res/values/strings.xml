@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">L-Earn</string>
+    <string name="app_name">Kwarantariusz</string>
     <string name="profile">Profile</string>
     <string name="search">Search</string>
     <string name="settings">Settings</string>
@@ -30,6 +30,19 @@
     <string name="description">Description</string>
     <string name="level">Level</string>
     <string name="location">Location</string>
+
+
+    <string name="welcome_page_do_you_need_help">POTRZEBUJESZ POMOCY ABY KTOS ZROBIL ZA CIEBIE ZAKUPY W TRAKCIE KWARANTANNY?</string>
+    <string name="welcome_page_let_our_heroic">POMOGA CI NASI BOHATERSCY</string>
+    <string name="welcome_page_quaranteers">KWARATARIUSZE!</string>
+
+    <string name="needy_instruction_add">DODAJ LISTE ZAKUPOW, PRZYBLIZONA KWOTE ZA ZAKUPY, MIASTO, ADRES I TELEFON</string>
+    <string name="needy_instruction_your_local">TWOJ LOKALNY KWARANTARIUSZ SKONTAKTUJE SIE Z TOBA, ABY DOPYTAC O SZCZEGOLY, ZROBI ZA CIEBIE ZAKUPY I DOSTARCZY JE DO DOMU.</string>
+
+    <string name="quaranteer_instruction_do_you_want_to_help">CHCESZ POMOC OSOBOM Z GRUPY RYZYKA?</string>
+    <string name="quaranteer_instruction_become">ZOSTAN</string>
+    <string name="quaranteer_instruction_quaranteer_exclamation_mark">KWARANTARIUSZEM!</string>
+    <string name="quaranteer_instruction_make_account">ZALOZ KONTO I ZNAJDZ LISTY ZAKUPOW W TWOJEJ OKOLICY</string>
 
     <string name="hellothere">HELLO THERE!</string>
     <string name="sayhito">SAY HI TO</string>

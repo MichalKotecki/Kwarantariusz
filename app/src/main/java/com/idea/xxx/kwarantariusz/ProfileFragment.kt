@@ -39,8 +39,8 @@ class ProfileFragment : Fragment()
         val fragmentManager: FragmentManager =  context.supportFragmentManager
         val registerFragment = RegisterFragment()
         val loginFragment = LoginFragment()
-        val addNewAdvertFragment = AddNewAdvertFragment()
-        val tableLessonStatusFragment = TableLessonStatusFragment()
+        val addNewAdvertFragment = RegisterFragment()
+        val tableLessonStatusFragment = RegisterFragment()
 
 
 

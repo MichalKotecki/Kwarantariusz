@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import com.idea.xxx.kwarantariusz.R
-import com.idea.xxx.l_earn.RegisterFragment
+import com.idea.xxx.kwarantariusz.RegisterFragment
 import kotlinx.android.synthetic.main.viewpager_fragment.*
 
 class ViewPagerFragment : Fragment()

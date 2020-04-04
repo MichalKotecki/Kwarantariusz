@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
+import com.idea.xxx.kwarantariusz.BlankFragment
 import com.idea.xxx.kwarantariusz.R
 import com.idea.xxx.kwarantariusz.RegisterFragment
 import kotlinx.android.synthetic.main.student_instruction_fragment.*
@@ -33,14 +34,14 @@ class NeedyInstructionFragment : Fragment()
 
         val fragmentManager: FragmentManager =  context.supportFragmentManager
         val registerFragment = RegisterFragment()
-
+        val blankFragment = BlankFragment()
 
 
         student_instruc_search_button.setOnClickListener{
 
                 fragmentManager.beginTransaction()
                     .setCustomAnimations(R.anim.in_left_down_corner, R.anim.out_right_up_corner)
-                    .replace(R.id.containerForFragment, searchFragment).commit()
+                    .replace(R.id.containerForFragment, blankFragment).commit()
 
         }
 

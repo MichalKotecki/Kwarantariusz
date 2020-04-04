@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
+import com.idea.xxx.kwarantariusz.BlankFragment
 import com.idea.xxx.kwarantariusz.R
 import com.idea.xxx.kwarantariusz.RegisterFragment
 import kotlinx.android.synthetic.main.teacher_instruction_fragment.*
@@ -34,7 +35,6 @@ class QuaranteerInstructionFragment : Fragment()
 
         val fragmentManager: FragmentManager =  context.supportFragmentManager
         val registerFragment = RegisterFragment()
-        val addNewAdvertFragment = AddNewAdvertFragment()
 
 
 
@@ -42,12 +42,12 @@ class QuaranteerInstructionFragment : Fragment()
 
             val sharedPreferences = context.getSharedPreferences("Preferences_User_Data", Context.MODE_PRIVATE)
             val isLogged = sharedPreferences.getBoolean("isLogged", false)
-            val joinCommunityFragment: JoinCommunityFragment = JoinCommunityFragment()
+            val blankFragment = BlankFragment()
 
             teacher_instructions_visit_website_button.setOnClickListener{
                 fragmentManager.beginTransaction()
                     .setCustomAnimations(R.anim.in_left_down_corner, R.anim.out_right_up_corner)
-                    .replace(R.id.containerForFragment, joinCommunityFragment).commit()
+                    .replace(R.id.containerForFragment, blankFragment).commit()
             }
 
 //            if(isLogged)
