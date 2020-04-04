@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         val instructionsMainFragment = ViewPagerFragment()
         val profileFragment = ProfileFragment()
         val registerFragment = RegisterFragment()
+        val tableOrderFragment = TableOrderFragment()
 
 
         fragmentManager.beginTransaction().add(R.id.containerForFragment, instructionsMainFragment).commit()
@@ -75,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.search_item -> {
                     fragmentManager.beginTransaction()
                         .setCustomAnimations(R.anim.in_left_down_corner, R.anim.out_right_up_corner)
-                        .replace(R.id.containerForFragment, registerFragment).commit()
+                        .replace(R.id.containerForFragment, tableOrderFragment).commit()
                 }
                 R.id.settings_item -> {
                     fragmentManager.beginTransaction()

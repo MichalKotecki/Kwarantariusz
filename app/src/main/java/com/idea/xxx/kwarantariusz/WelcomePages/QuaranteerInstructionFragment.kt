@@ -12,7 +12,7 @@ import androidx.fragment.app.FragmentManager
 import com.idea.xxx.kwarantariusz.BlankFragment
 import com.idea.xxx.kwarantariusz.R
 import com.idea.xxx.kwarantariusz.RegisterFragment
-import kotlinx.android.synthetic.main.teacher_instruction_fragment.*
+import kotlinx.android.synthetic.main.quaranteer_instruction_fragment.*
 
 class QuaranteerInstructionFragment : Fragment()
 {
@@ -20,7 +20,7 @@ class QuaranteerInstructionFragment : Fragment()
     lateinit var context: FragmentActivity
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.teacher_instruction_fragment, container, false)
+        return inflater.inflate(R.layout.quaranteer_instruction_fragment, container, false)
     }
 
 

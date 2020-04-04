@@ -48,7 +48,7 @@
             android:id="@+id/ifyouareateacher_teacher" android:textSize="14sp"
             android:textColor="@color/BasicWhite"
             app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="270dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="220dp" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
     />
     <Button

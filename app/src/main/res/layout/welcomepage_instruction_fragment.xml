@@ -36,6 +36,6 @@
             android:layout_height="80dp"
             android:id="@+id/hellothee_welcome_t" android:textSize="18sp"
             android:textColor="@color/BasicWhite" app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginTop="290dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="220dp" app:layout_constraintStart_toStartOf="parent"
             android:layout_marginStart="16dp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,7 +51,10 @@
     <string name="add_shopping_list">DODAJ LISTE ZAKUPOW</string>
 
 
-
+    <string name="help">POMAGAM</string>
+    <string name="shopping_lists">LISTY ZAKUPOW</string>
+    <string name="currency">ZLOTY</string>
+    <string name="countrycallingcode">+48</string>
 
 
     <string name="distance">Distance</string>

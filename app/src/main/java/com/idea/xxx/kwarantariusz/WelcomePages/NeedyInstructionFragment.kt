@@ -11,7 +11,7 @@ import androidx.fragment.app.FragmentManager
 import com.idea.xxx.kwarantariusz.BlankFragment
 import com.idea.xxx.kwarantariusz.R
 import com.idea.xxx.kwarantariusz.RegisterFragment
-import kotlinx.android.synthetic.main.student_instruction_fragment.*
+import kotlinx.android.synthetic.main.needy_instruction_fragment.*
 
 class NeedyInstructionFragment : Fragment()
 {
@@ -19,7 +19,7 @@ class NeedyInstructionFragment : Fragment()
     lateinit var context: FragmentActivity
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.student_instruction_fragment, container, false)
+        return inflater.inflate(R.layout.needy_instruction_fragment, container, false)
     }
 
 
