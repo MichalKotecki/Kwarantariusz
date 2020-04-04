@@ -6,15 +6,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.EditText
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
-import kotlinx.android.synthetic.main.login_fragment.*
 import kotlinx.android.synthetic.main.profile_fragment.*
-import kotlinx.android.synthetic.main.register_fragment.*
 
 class ProfileFragment : Fragment()
 {
@@ -39,8 +35,6 @@ class ProfileFragment : Fragment()
         val fragmentManager: FragmentManager =  context.supportFragmentManager
         val registerFragment = RegisterFragment()
         val loginFragment = LoginFragment()
-        val addNewAdvertFragment = RegisterFragment()
-        val tableLessonStatusFragment = RegisterFragment()
 
 
 
@@ -50,7 +44,7 @@ class ProfileFragment : Fragment()
         name_edit.setText(username)
 
         val email: String? = sharedPreferences.getString("email", "Email")
-        email_edit.setText(email)
+        phone_edit.setText(email)
 
         val city: String? = sharedPreferences.getString("city", "City")
         city_edit.setText(city)
@@ -62,18 +56,6 @@ class ProfileFragment : Fragment()
             // TODO zapisywanie do shared preferences oraz zmianę w bazie danych
         }
 
-//        addnewadvert_button.setOnClickListener {
-//
-//            fragmentManager.beginTransaction()
-//                .setCustomAnimations(R.anim.in_left_down_corner, R.anim.out_right_up_corner)
-//                .replace(R.id.containerForFragment, addNewAdvertFragment).commit()
-//        }
-
-        seemylessons_button.setOnClickListener {
-            fragmentManager.beginTransaction()
-                .setCustomAnimations(R.anim.in_up, R.anim.out_down)
-                .replace(R.id.containerForFragment, tableLessonStatusFragment).commit()
-        }
 
         logout_button.setOnClickListener{
 
