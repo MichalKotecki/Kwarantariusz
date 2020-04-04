@@ -12,11 +12,13 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.os.AsyncTask
-import android.telecom.Call
+import com.google.gson.annotations.SerializedName
 import com.idea.xxx.kwarantariusz.Adapters.OrderRecyclerViewAdapter
+import com.idea.xxx.kwarantariusz.DTO.Order.OrdersListFromCityWithGivenIDDTO
 import com.idea.xxx.kwarantariusz.Data.OrderItemData
 import kotlinx.android.synthetic.main.tableorder_fragment.*
-import javax.security.auth.callback.Callback
+import retrofit2.Call
+import retrofit2.Callback
 
 
 class TableOrderFragment : Fragment() {
@@ -60,40 +62,53 @@ class TableOrderFragment : Fragment() {
         val tempProductList3: ArrayList<String> = arrayListOf("makaron", "leki", "cukier", "ldbfkk l;kfdgl;hkdf llkdfl;hf lklfdh ldfgl;kdf dlfhl;fl ldkflhfk ldkhl;k")
         orderArray.add(OrderItemData(5,6, "Stanisław Fizykows", "888999888", 7, "Mateusz Superowski", tempProductList3, "Jestem starszą osobą", 50, "waiting", "Rewolucji 158"))
 
+
+        val city_id: Long = 5
+        MainActivity.client.getAllOrderFromCityWithGivenID(city_id)
+            .enqueue(object : Callback<OrdersListFromCityWithGivenIDDTO> {
+
+                override fun onFailure(call: Call<OrdersListFromCityWithGivenIDDTO>, t: Throwable) {
+                    Toast.makeText(
+                        context,
+                        "Error in Order Table Fragment",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+
+                override fun onResponse(
+                    call: Call<OrdersListFromCityWithGivenIDDTO>,
+                    response: retrofit2.Response<OrdersListFromCityWithGivenIDDTO>
+                ) {
+                    val ordersDTO = response.body()?.orders
+                    for (order in ordersDTO!!)
+                    {
+                        orderArray.add(
+                            OrderItemData
+                            (
+                                order.id_order,
+                                order.id_needy,
+                                order.needy_name,
+                                order.needy_phone,
+                                order.id_quaranteer,
+                                order.quaranteer_name,
+                                order.productList,
+                                order.description,
+                                order.max_spend,
+                                order.status,
+                                order.address
+                            )
+                        )
+                    }
+                    orderRecyclerViewAdapter = OrderRecyclerViewAdapter(orderArray, context)
+                    tableorder_recyclerview.adapter = orderRecyclerViewAdapter
+
+                }
+
+            }
+        )
+
         orderRecyclerViewAdapter = OrderRecyclerViewAdapter(orderArray, context)
         tableorder_recyclerview.adapter = orderRecyclerViewAdapter
-
-//        MainActivity.client.getOfferBySubjectAndLevel(subject.toString(), level.toString())
-//            .enqueue(object : Callback<OffersDto> {
-//                override fun onResponse(
-//                    call: Call<OffersDto>,
-//                    response: retrofit2.Response<OffersDto>
-//                ) {
-//                    val offersDto = response.body()?.offers
-//                    for (offer in offersDto!!) {
-//                        orderArray.add(
-//                            OrderItemData(
-//                                offer.ID,
-//                                offer.price_per_hour.toString(),
-//                                offer.rate.toString(),
-//                                "null", //TODO dorobić
-//                                offer.description
-//                            )
-//                        )
-//                    }
-//                    orderRecyclerViewAdapter = OrderRecyclerViewAdapter(orderArray, context)
-//                    tableorder_recyclerview.adapter = orderRecyclerViewAdapter
-//
-//                }
-//
-//                override fun onFailure(call: Call<OffersDto>, t: Throwable) {
-//                    Toast.makeText(
-//                        context,
-//                        "Error in Order Table Fragment",
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-//                }
-//            })
 
 
         val fragmentManager: FragmentManager = context.supportFragmentManager

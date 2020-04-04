@@ -34,6 +34,12 @@
                 android:id="@+id/order_phone_textView"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="20dp"/>
+        <!--<Button-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/ic_call_black_24dp"-->
+                <!--android:id="@+id/order_call_button"-->
+                <!--android:layout_marginRight="20dp" android:layout_width="51dp"/>-->
+
     </TableRow>
 
     <TableRow android:padding="15dip">
@@ -43,6 +49,7 @@
                 android:id="@+id/order_description_textView"/>
         <Button
                 android:text="@string/help"
+                android:textColor="@color/DefaultTextGray"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_rounded_corners"
                 android:id="@+id/order_help_button"

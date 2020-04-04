@@ -10,6 +10,11 @@ import androidx.recyclerview.widget.RecyclerView
 import com.idea.xxx.kwarantariusz.Data.OrderItemData
 import com.idea.xxx.kwarantariusz.R
 import kotlinx.android.synthetic.main.single_order_in_recyclerview_layout.view.*
+import androidx.core.content.ContextCompat.startActivity
+import android.content.Intent
+import android.annotation.SuppressLint
+import android.net.Uri
+
 
 class OrderRecyclerViewAdapter (private val OrderList: ArrayList<OrderItemData>, context: FragmentActivity)  : RecyclerView.Adapter<OrderRecyclerViewAdapter.OrderHolder>() {
 
@@ -48,12 +53,13 @@ class OrderRecyclerViewAdapter (private val OrderList: ArrayList<OrderItemData>,
             v.setOnClickListener(this)
         }
 
+        @SuppressLint("MissingPermission")
         fun bindOrder(order: OrderItemData){
             this.order = order
             view.order_street_textView.text = order.address
-            view.order_max_spent_textView.text = order.max_spend.toString() + " " + context.resources.getString(R.string.currency)
+            view.order_max_spent_textView.text = order.max_spend.toString() + " " + context.resources.getString(com.idea.xxx.kwarantariusz.R.string.currency)
             view.order_name_textView.text = order.needy_name
-            view.order_phone_textView.text = context.resources.getString(R.string.countrycallingcode) + " " + order.needy_phone
+            view.order_phone_textView.text = context.resources.getString(com.idea.xxx.kwarantariusz.R.string.countrycallingcode) + " " + order.needy_phone
             view.order_description_textView.text = order.description
             view.order_products_textView.text = order.productList.joinToString()
 
@@ -62,6 +68,11 @@ class OrderRecyclerViewAdapter (private val OrderList: ArrayList<OrderItemData>,
 
             bundle.putLong("id_order", id_order)
 
+//            view.order_call_button.setOnClickListener {
+//                val callIntent = Intent(Intent.ACTION_CALL)
+//                callIntent.data = Uri.parse("tel:" + order.needy_phone)
+//                context.startActivity(callIntent)
+//            }
 
             view.order_help_button.setOnClickListener {
                 val fragmentManager: FragmentManager =  context.supportFragmentManager
