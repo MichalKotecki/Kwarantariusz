@@ -1,6 +1,7 @@
 package com.idea.xxx.kwarantariusz
 
 import android.app.Activity
+import android.app.DownloadManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,13 +13,21 @@ import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import android.os.AsyncTask
+import com.android.volley.Request
+import com.android.volley.RequestQueue
+import com.android.volley.Response
+import com.android.volley.toolbox.JsonArrayRequest
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
+import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 import com.idea.xxx.kwarantariusz.Adapters.OrderRecyclerViewAdapter
 import com.idea.xxx.kwarantariusz.DTO.Order.OrdersListFromCityWithGivenIDDTO
 import com.idea.xxx.kwarantariusz.Data.OrderItemData
 import kotlinx.android.synthetic.main.tableorder_fragment.*
-import retrofit2.Call
-import retrofit2.Callback
+import org.json.JSONArray
+import org.json.JSONObject
+
 
 
 class TableOrderFragment : Fragment() {
@@ -27,6 +36,7 @@ class TableOrderFragment : Fragment() {
     private lateinit var linearLayoutManager: LinearLayoutManager
     private lateinit var orderRecyclerViewAdapter: OrderRecyclerViewAdapter
     val orderArray= ArrayList<OrderItemData>()
+    lateinit var queue: RequestQueue
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -80,49 +90,70 @@ class TableOrderFragment : Fragment() {
         orderArray.add(OrderItemData(3, 4, "Mark Lee", "654654654", 5, "Andrzej Pomocny", tempProductList5, "I'm very ill. :(", 80, "new", "Royal St. 73"))
 
 
-        val city_id: Long = 5
-        MainActivity.client.getAllOrderFromCityWithGivenID(city_id)
-            .enqueue(object : Callback<OrdersListFromCityWithGivenIDDTO> {
+//        val city_id: Long = 5
+//        MainActivity.client.getAllOrderFromCityWithGivenID(city_id)
+//            .enqueue(object : Callback<OrdersListFromCityWithGivenIDDTO> {
+//
+//                override fun onFailure(call: Call<OrdersListFromCityWithGivenIDDTO>, t: Throwable) {
+////                    Toast.makeText(
+////                        context,
+////                        "Error in Order Table Fragment",
+////                        Toast.LENGTH_SHORT
+////                    ).show()
+//                }
+//
+//                override fun onResponse(
+//                    call: Call<OrdersListFromCityWithGivenIDDTO>,
+//                    response: retrofit2.Response<OrdersListFromCityWithGivenIDDTO>
+//                ) {
+//                    val ordersDTO = response.body()?.orders
+//                    for (order in ordersDTO!!)
+//                    {
+//                        orderArray.add(
+//                            OrderItemData
+//                            (
+//                                order.id_order,
+//                                order.id_needy,
+//                                order.needy_name,
+//                                order.phone,
+//                                order.id_quaranteer,
+//                                order.quaranteer_name,
+//                                order.products,
+//                                order.description,
+//                                order.max_spend,
+//                                order.status,
+//                                order.address
+//                            )
+//                        )
+//                    }
+//                    orderRecyclerViewAdapter = OrderRecyclerViewAdapter(orderArray, context)
+//                    tableorder_recyclerview.adapter = orderRecyclerViewAdapter
+//
+//                }
+//
+//            }
+//        )
 
-                override fun onFailure(call: Call<OrdersListFromCityWithGivenIDDTO>, t: Throwable) {
-//                    Toast.makeText(
-//                        context,
-//                        "Error in Order Table Fragment",
-//                        Toast.LENGTH_SHORT
-//                    ).show()
-                }
 
-                override fun onResponse(
-                    call: Call<OrdersListFromCityWithGivenIDDTO>,
-                    response: retrofit2.Response<OrdersListFromCityWithGivenIDDTO>
-                ) {
-                    val ordersDTO = response.body()?.orders
-                    for (order in ordersDTO!!)
-                    {
-                        orderArray.add(
-                            OrderItemData
-                            (
-                                order.id_order,
-                                order.id_needy,
-                                order.needy_name,
-                                order.phone,
-                                order.id_quaranteer,
-                                order.quaranteer_name,
-                                order.products,
-                                order.description,
-                                order.max_spend,
-                                order.status,
-                                order.address
-                            )
-                        )
-                    }
-                    orderRecyclerViewAdapter = OrderRecyclerViewAdapter(orderArray, context)
-                    tableorder_recyclerview.adapter = orderRecyclerViewAdapter
 
-                }
+        // Volley
+        queue = Volley.newRequestQueue(context)
+        val URL: String = "https://my-json-server.typicode.com/typicode/demo/posts"
 
-            }
-        )
+
+        val stringRequest = StringRequest(Request.Method.GET, URL,
+            Response.Listener<String> { response ->
+
+                val post = Gson().fromJson(response, Array<Post>::class.java)
+                Toast.makeText(context, post[2].title, Toast.LENGTH_SHORT ).show()
+            },
+            Response.ErrorListener {
+                Toast.makeText(context, "Volley does not work.", Toast.LENGTH_SHORT ).show()
+            })
+
+        queue.add(stringRequest)
+
+
 
         orderRecyclerViewAdapter = OrderRecyclerViewAdapter(orderArray, context)
         tableorder_recyclerview.adapter = orderRecyclerViewAdapter
@@ -134,3 +165,5 @@ class TableOrderFragment : Fragment() {
     }
 
 }
+
+data class Post(val id: Int, val title: String = "")

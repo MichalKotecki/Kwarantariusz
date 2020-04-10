@@ -15,8 +15,8 @@
             app:layout_constraintStart_toStartOf="parent"/>
     <TextView
             android:text="@string/quaranteer_instruction_become"
-            android:layout_width="62dp"
-            android:layout_height="24dp"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
             android:id="@+id/advertise_teacher_t" android:textSize="14sp"
             android:textColor="@color/BasicWhite"
             android:layout_marginTop="8dp"
@@ -25,8 +25,8 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
     <TextView
             android:text="@string/quaranteer_instruction_make_account"
-            android:layout_width="212dp"
-            android:layout_height="45dp"
+            android:layout_width="207dp"
+            android:layout_height="55dp"
             android:id="@+id/givefeedback_teacher_t" android:textSize="14sp"
             android:textColor="@color/BasicWhite"
             app:layout_constraintTop_toBottomOf="@+id/findclients_findclients_t"
@@ -34,7 +34,7 @@
             app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
     <TextView
             android:text="@string/quaranteer_instruction_quaranteer_exclamation_mark"
-            android:layout_width="316dp"
+            android:layout_width="208dp"
             android:layout_height="38dp"
             android:id="@+id/findclients_findclients_t" android:textSize="30sp"
             android:textColor="@color/BasicWhite"
@@ -43,8 +43,8 @@
             android:layout_marginStart="16dp"/>
     <TextView
             android:text="@string/quaranteer_instruction_do_you_want_to_help"
-            android:layout_width="204dp"
-            android:layout_height="42dp"
+            android:layout_width="185dp"
+            android:layout_height="39dp"
             android:id="@+id/ifyouareateacher_teacher" android:textSize="14sp"
             android:textColor="@color/BasicWhite"
             app:layout_constraintTop_toTopOf="parent"

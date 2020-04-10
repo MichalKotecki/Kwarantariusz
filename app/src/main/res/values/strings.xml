@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Kwarantariusz</string>
+    <string name="app_name">Quaranteer</string>
     <string name="michalkotecki">MICHAL KOTECKI</string>
     <string name="hubertfraszczyk">HUBERT FRASZCZYK</string>
     <string name="profile">Profile</string>
@@ -35,16 +35,16 @@
 
 
     <string name="welcome_page_do_you_need_help">DO YOU NEED SOMEONE TO DO YOUR SHOPPING IN TIME OF QUARANTINE?</string>
-    <string name="welcome_page_let_our_heroic">LET OUR HEROIC</string>
+    <string name="welcome_page_let_our_heroic">YOU CAN COUNT ON OUR HEROIC</string>
     <string name="welcome_page_quaranteers">QUARANTEERS!</string>
 
     <string name="needy_instruction_add">GIVE US YOUR SHOPPING LIST, APPROXIMATED COST, CITY, YOUR ADDRESS AND PHONE</string>
-    <string name="needy_instruction_your_local">YOUR LOCAL QUARANTEER WILL CONTACT YOU TO TALK ABOUT DETAILS. QUARANTEER WILL MAKE YOUR SHOPPING FOR YOU AND WILL BRING IT TO YOUR HOME</string>
+    <string name="needy_instruction_your_local">YOUR LOCAL QUARANTEER WILL CONTACT YOU TO TALK ABOUT DETAILS. QUARANTEER WILL DO YOUR SHOPPING FOR YOU AND WILL BRING IT TO YOUR HOME</string>
 
-    <string name="quaranteer_instruction_do_you_want_to_help">DO YOU WANT TO HELP THE PEOPLE FROM THE RISK GROUP?</string>
+    <string name="quaranteer_instruction_do_you_want_to_help">WANNA HELP PEOPLE FROM THE RISK GROUP?</string>
     <string name="quaranteer_instruction_become">BECOME</string>
     <string name="quaranteer_instruction_quaranteer_exclamation_mark">QUARANTEER!</string>
-    <string name="quaranteer_instruction_make_account">CREATE AN ACCOUNT AND SEARCH FOR SHOPPING LISTS FROM YOUR AREA</string>
+    <string name="quaranteer_instruction_make_account">CREATE ACCOUNT AND SEARCH FOR SHOPPING LISTS FROM NEARBY</string>
 
 
     <string name="join">JOIN</string>
@@ -52,7 +52,7 @@
 
 
     <string name="help">HELP</string>
-    <string name="shopping_lists">SHOPPING LISTS FROM: </string>
+    <string name="shopping_lists">SHOPPING LISTS FROM</string>
     <string name="currency">&#163;</string>
     <string name="countrycallingcode">+44</string>
 
@@ -74,5 +74,7 @@
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="choosetime">Choose time:</string>
+    <string name="phone">Phone number</string>
+    <string name="street">Street</string>
 
 </resources>
