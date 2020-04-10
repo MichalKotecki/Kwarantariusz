@@ -76,5 +76,13 @@
     <string name="choosetime">Choose time:</string>
     <string name="phone">Phone number</string>
     <string name="street">Street</string>
+    <string name="address">Address</string>
+    <string name="pleaseenterphone">Please enter phone</string>
+    <string name="pleaseentercity">Please enter city</string>
+    <string name="pleaseenteraddress">Please enter address</string>
+    <string name="passwordsdonotmatch">Passwords do not match</string>
+    <string name="thisisnotavalidphonenumber">This is not a valid phone number</string>
+    <string name="quaranteer_uppercase">QUARANTEER</string>
+    <string name="editprofile">EDIT PROFILE</string>
 
 </resources>

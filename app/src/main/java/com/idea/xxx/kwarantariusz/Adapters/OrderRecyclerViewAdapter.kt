@@ -58,10 +58,10 @@ class OrderRecyclerViewAdapter (private val OrderList: ArrayList<OrderItemData>,
             this.order = order
             view.order_street_textView.text = order.address
             view.order_max_spent_textView.text = order.max_spend.toString() + " " + context.resources.getString(com.idea.xxx.kwarantariusz.R.string.currency)
-            view.order_name_textView.text = order.needy_name
-            view.order_phone_textView.text = context.resources.getString(com.idea.xxx.kwarantariusz.R.string.countrycallingcode) + " " + order.needy_phone
+            view.order_name_textView.text = order.first_name + " " + order.last_name
+            view.order_phone_textView.text = context.resources.getString(com.idea.xxx.kwarantariusz.R.string.countrycallingcode) + " " + order.phone
             view.order_description_textView.text = order.description
-            view.order_products_textView.text = order.productList.joinToString()
+            view.order_products_textView.text = order.getProductNames().joinToString()
 
 
 

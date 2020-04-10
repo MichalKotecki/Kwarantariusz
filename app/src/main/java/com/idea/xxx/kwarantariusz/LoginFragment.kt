@@ -116,11 +116,12 @@ class LoginFragment : Fragment() {
 
 //            }
 
-//            textGoRegister.setOnClickListener { view ->
-//                fragmentManager.beginTransaction()
-//                    .setCustomAnimations(R.anim.in_left_down_corner, R.anim.out_right_up_corner)
-//                    .replace(R.id.containerForFragment, registerFragment).commit()
-//
+            textGoRegister.setOnClickListener { view ->
+                fragmentManager.beginTransaction()
+                    .setCustomAnimations(R.anim.in_left_down_corner, R.anim.out_right_up_corner)
+                    .replace(R.id.containerForFragment, registerFragment).commit()
+            }
+
             }
         }
     }

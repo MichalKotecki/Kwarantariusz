@@ -22,7 +22,6 @@ import com.android.volley.toolbox.Volley
 import com.google.gson.Gson
 import com.google.gson.annotations.SerializedName
 import com.idea.xxx.kwarantariusz.Adapters.OrderRecyclerViewAdapter
-import com.idea.xxx.kwarantariusz.DTO.Order.OrdersListFromCityWithGivenIDDTO
 import com.idea.xxx.kwarantariusz.Data.OrderItemData
 import kotlinx.android.synthetic.main.tableorder_fragment.*
 import org.json.JSONArray
@@ -65,6 +64,9 @@ class TableOrderFragment : Fragment() {
 //        val subject = bundle?.getString("subject")
 
 
+
+        // Polish
+
 //        val tempProductList1: ArrayList<String> = arrayListOf("8 relek papieru toaletowego", "2 mleka", "masło")
 //        orderArray.add(OrderItemData(3,4, "Stanisław Fizykowski", "123123123", 5, "Andrzej Pomocny", tempProductList1, "Jestem starszą osobą", 100, "waiting", "Polna 2"))
 //        val tempProductList2: ArrayList<String> = arrayListOf("3 wody", "2 chleby")
@@ -74,20 +76,25 @@ class TableOrderFragment : Fragment() {
 
 
 
-        val tempProductList1: ArrayList<String> = arrayListOf("10 rolls of toilet paper", "4 milks", "cereals", "flour", "mayonnaise", "pizza", "orange juice")
-        orderArray.add(OrderItemData(3, 4, "Emily Smith", "999888777", 5, "Andrzej Pomocny", tempProductList1, "I'm senior", 50, "new", "Hope St. 38"))
+        // English
 
-        val tempProductList2: ArrayList<String> = arrayListOf("4 mineral waters", "ham", "sliced bread", "butter")
-        orderArray.add(OrderItemData(3, 4, "Stan Barnes", "123123123", 5, "Andrzej Pomocny", tempProductList2, "Shopping from Costco", 30, "new", "Castle St. 2"))
+//        val tempProductList1: ArrayList<String> = arrayListOf("10 rolls of toilet paper", "4 milks", "cereals", "flour", "mayonnaise", "pizza", "orange juice")
+//        orderArray.add(OrderItemData(3, 4, "Emily Smith", "999888777", 5, "Andrzej Pomocny", tempProductList1, "I'm senior", 50, "new", "Hope St. 38"))
+//
+//        val tempProductList2: ArrayList<String> = arrayListOf("4 mineral waters", "ham", "sliced bread", "butter")
+//        orderArray.add(OrderItemData(3, 4, "Stan Barnes", "123123123", 5, "Andrzej Pomocny", tempProductList2, "Shopping from Costco", 30, "new", "Castle St. 2"))
+//
+//        val tempProductList3: ArrayList<String> = arrayListOf("4 kilos of chicken", "2 sliced breads", "butter", "2 milks", "cereals", "cocoa")
+//        orderArray.add(OrderItemData(3, 4, "John Bean", "456456456", 5, "Andrzej Pomocny", tempProductList3, "I am disabled", 80, "new", "Duck St. 112"))
+//
+//        val tempProductList4: ArrayList<String> = arrayListOf("tee", "sugar", "spaghetti pasta", "spaghetti sauce")
+//        orderArray.add(OrderItemData(3, 4, "Hillary June", "321321321", 5, "Andrzej Pomocny", tempProductList4, "please help", 40, "new", "North St. 19"))
+//
+//        val tempProductList5: ArrayList<String> = arrayListOf("3 kilos of chicken", "beef", "headache medicine", "stock cubes", "pasta", "3 juices", "1 kilo of cake")
+//        orderArray.add(OrderItemData(3, 4, "Mark Lee", "654654654", 5, "Andrzej Pomocny", tempProductList5, "I'm very ill. :(", 80, "new", "Royal St. 73"))
 
-        val tempProductList3: ArrayList<String> = arrayListOf("4 kilos of chicken", "2 sliced breads", "butter", "2 milks", "cereals", "cocoa")
-        orderArray.add(OrderItemData(3, 4, "John Bean", "456456456", 5, "Andrzej Pomocny", tempProductList3, "I am disabled", 80, "new", "Duck St. 112"))
 
-        val tempProductList4: ArrayList<String> = arrayListOf("tee", "sugar", "spaghetti pasta", "spaghetti sauce")
-        orderArray.add(OrderItemData(3, 4, "Hillary June", "321321321", 5, "Andrzej Pomocny", tempProductList4, "please help", 40, "new", "North St. 19"))
 
-        val tempProductList5: ArrayList<String> = arrayListOf("3 kilos of chicken", "beef", "headache medicine", "stock cubes", "pasta", "3 juices", "1 kilo of cake")
-        orderArray.add(OrderItemData(3, 4, "Mark Lee", "654654654", 5, "Andrzej Pomocny", tempProductList5, "I'm very ill. :(", 80, "new", "Royal St. 73"))
 
 
 //        val city_id: Long = 5
@@ -136,16 +143,17 @@ class TableOrderFragment : Fragment() {
 
 
 
+
+
         // Volley
         queue = Volley.newRequestQueue(context)
-        val URL: String = "https://my-json-server.typicode.com/typicode/demo/posts"
-
+        val URL: String = "https://quaranteerserver.000webhostapp.com/orders.php?id_c=842"
 
         val stringRequest = StringRequest(Request.Method.GET, URL,
             Response.Listener<String> { response ->
-
-                val post = Gson().fromJson(response, Array<Post>::class.java)
-                Toast.makeText(context, post[2].title, Toast.LENGTH_SHORT ).show()
+                val ordersArray = Gson().fromJson(response, Array<OrderItemData>::class.java)
+                Toast.makeText(context, ordersArray[1].last_name, Toast.LENGTH_SHORT ).show()
+                orderArray.addAll(ArrayList(ordersArray.toMutableList()))
             },
             Response.ErrorListener {
                 Toast.makeText(context, "Volley does not work.", Toast.LENGTH_SHORT ).show()

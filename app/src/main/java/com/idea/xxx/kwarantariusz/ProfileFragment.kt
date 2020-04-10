@@ -11,6 +11,9 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
 import kotlinx.android.synthetic.main.profile_fragment.*
+import android.widget.CompoundButton
+
+
 
 class ProfileFragment : Fragment()
 {
@@ -41,23 +44,43 @@ class ProfileFragment : Fragment()
         val sharedPreferences = context.getSharedPreferences("Preferences_User_Data", Context.MODE_PRIVATE)
 
         val username: String? = sharedPreferences.getString("username", "Name")
-        name_edit.setText(username)
+        name_profile_edit.setText(username)
 
         val email: String? = sharedPreferences.getString("email", "Email")
-        phone_edit.setText(email)
+        phone_profile_edit.setText(email)
 
         val city: String? = sharedPreferences.getString("city", "City")
-        city_edit.setText(city)
+        city_profile_edit.setText(city)
 
         val street: String? = sharedPreferences.getString("street", "Street")
-        street_edit.setText(street)
+        address_profile_edit.setText(street)
 
-        save_button.setOnClickListener {
+
+        edit_profile_switch.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+            if(isChecked) {
+                name_profile_edit.isEnabled = true
+                phone_profile_edit.isEnabled = true
+                password_profile_edit.isEnabled = true
+                city_profile_edit.isEnabled = true
+                address_profile_edit.isEnabled = true
+            }
+            else
+            {
+                name_profile_edit.isEnabled = false
+                phone_profile_edit.isEnabled = false
+                password_profile_edit.isEnabled = false
+                city_profile_edit.isEnabled = false
+                address_profile_edit.isEnabled = false
+            }
+        })
+
+
+        save_profile_button.setOnClickListener {
             // TODO zapisywanie do shared preferences oraz zmianę w bazie danych
         }
 
 
-        logout_button.setOnClickListener{
+        logout_profile_button.setOnClickListener{
 
             val sharedPreferences = context.getSharedPreferences("Preferences_User_Data", Context.MODE_PRIVATE)
             val editor = sharedPreferences.edit()

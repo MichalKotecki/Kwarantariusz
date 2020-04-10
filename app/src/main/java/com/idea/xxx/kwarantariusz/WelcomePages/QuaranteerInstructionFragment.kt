@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.fragment.app.FragmentManager
@@ -32,11 +33,11 @@ class QuaranteerInstructionFragment : Fragment()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        (activity as AppCompatActivity).supportActionBar?.title =
+            getString(R.string.quaranteer_uppercase)  // This line changes the title in the top bar
 
         val fragmentManager: FragmentManager =  context.supportFragmentManager
         val registerFragment = RegisterFragment()
-
-
 
         teacher_instructions_visit_website_button.setOnClickListener{
 

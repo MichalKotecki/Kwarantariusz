@@ -9,8 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.core.app.NotificationManagerCompat
 import androidx.fragment.app.FragmentManager
-import com.idea.xxx.kwarantariusz.RetrofitClient.RetrofitClientInstance
-import com.idea.xxx.kwarantariusz.Service.KwarantariuszApiService
 import com.idea.xxx.kwarantariusz.WelcomePages.ViewPagerFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
@@ -18,15 +16,13 @@ import kotlin.concurrent.schedule
 
 class MainActivity : AppCompatActivity() {
 
-    companion object {
-        val client: KwarantariuszApiService = RetrofitClientInstance.makeRetrofitService()
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
         setTheme(R.style.AppTheme)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
 
         // WAY TO ADD A FRAGMENT
